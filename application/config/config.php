@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$host = $_SERVER['HTTP_HOST'];//e.g practa.ng || www.practa.ng || localhost
+$host = $_SERVER['https://arulkumararul2000.github.io/inventory-sales-ci/'];//e.g practa.ng || www.practa.ng || localhost
 $protocol = is_https() ? "https://" : "http://";
         
 if(is_cli()){
@@ -13,7 +13,7 @@ else if(stristr($host, "localhost") !== FALSE || (stristr($host, "192.168.") !==
 }
 
 else{
-    $allowed = ['www.1410inc.xyz', '1410inc.xyz'];//input all allowed urls here e.g. amirsanni.com, www.practa.ng, smartagapp.com
+    $allowed = ['https://arulkumararul2000.github.io/inventory-sales-ci/', '1410inc.xyz'];//input all allowed urls here e.g. amirsanni.com, www.practa.ng, smartagapp.com
 
     $config['base_url'] = in_array($host, $allowed) ? $protocol.$host."/inventory-sales-ci/" : "http://".$_SERVER['HTTP_HOST']."/";
 }
