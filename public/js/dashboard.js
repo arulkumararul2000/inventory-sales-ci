@@ -135,12 +135,12 @@ function loadPaymentMethodChart(year){
                     value: pos,
                     color: "#557f7c",
                     highlight: "#556f7c",
-                    label: "Pay on Online Only"
+                    label: "POS Only"
                   }, {
                     value: cashAndPos,
                     color: "#333",
                     highlight: "pink",
-                    label: "Cash and Pay on Online"
+                    label: "Cash and POS"
                   }];
                 }
             } 

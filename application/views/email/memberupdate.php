@@ -63,5 +63,6 @@
                 </tr>
             </tbody>
         </table>
+        <p><small>The Manager, <br>Ibadan Golf Club</small></p>
     </body>
 </html>

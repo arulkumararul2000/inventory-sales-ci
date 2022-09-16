@@ -5,15 +5,15 @@
     <!-- Default panel contents -->
     <div class="panel-heading">TRANSACTIONS</div>
     <?php if($allTransactions): ?>
-    <div class="table table-responsive glass">
-        <table class="table table-bordered table-striped table-hover">
+    <div class="table table-responsive">
+        <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>S.No</th>
+                    <th>SN</th>
                     <th>Receipt No</th>
                     <th>Total Items</th>
                     <th>Total Amount</th>
-                    <th>Paid Amount</th>
+                    <th>Amount Tendered</th>
                     <th>Change Due</th>
                     <th>Mode of Payment</th>
                     <th>Staff</th>
@@ -26,11 +26,11 @@
                 <?php foreach($allTransactions as $get): ?>
                 <tr>
                     <th><?= $sn ?>.</th>
-                    <td><a class="pointer vtr" style="color:#b30d0d" title="Click to view receipt"><?= $get->ref ?></a></td>
+                    <td><a class="pointer vtr" title="Click to view receipt"><?= $get->ref ?></a></td>
                     <td><?= $get->quantity ?></td>
-                    <td>₹<?= number_format($get->totalMoneySpent, 2) ?></td>
-                    <td>₹<?= number_format($get->amountTendered, 2) ?></td>
-                    <td>₹<?= number_format($get->changeDue, 2) ?></td>
+                    <td>&#8358;<?= number_format($get->totalMoneySpent, 2) ?></td>
+                    <td>&#8358;<?= number_format($get->amountTendered, 2) ?></td>
+                    <td>&#8358;<?= number_format($get->changeDue, 2) ?></td>
                     <td><?=  str_replace("_", " ", $get->modeOfPayment)?></td>
                     <td><?=$get->staffName?></td>
                     <td><?=$get->cust_name?> - <?=$get->cust_phone?> - <?=$get->cust_email?></td>

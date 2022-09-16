@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('');
                             <table class="table table-hover table-striped table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>S.No</th>
+                                        <th>SN</th>
                                         <th>Name</th>
                                         <th>Customer ID</th>
                                         <th>Phone Number</th>

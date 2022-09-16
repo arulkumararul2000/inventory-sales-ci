@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('');
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th>S.No</th>
+                    <th>SN</th>
                     <th>NAME</th>
                     <th>E-MAIL</th>
                     <th>MOBILE</th>

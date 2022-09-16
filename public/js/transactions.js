@@ -197,7 +197,7 @@ $(document).ready(function(){
              * hide "cash" an "pos" fields
              * 
              */
-            $("#amountTenderedLabel").html("Paid Amount");
+            $("#amountTenderedLabel").html("Amount Tendered");
             $("#amountTendered").val($("#cumAmount").html()).prop('disabled', true);
             $("#changeDue").html('0.00');
             $(".cashAndPos").addClass('hidden');
@@ -223,7 +223,7 @@ $(document).ready(function(){
              * unset any value that might be in "changeDue"
              * hide "cash" an "pos" fields
              */
-            $("#amountTenderedLabel").html("Paid Amount");
+            $("#amountTenderedLabel").html("Amount Tendered");
             $("#amountTendered").val('').prop('disabled', false);
             $("#changeDue").html('');
             $(".cashAndPos").addClass('hidden');
@@ -881,7 +881,7 @@ function calchadue(){
     var amountTendered = parseFloat($("#amountTendered").val());
 
     if(amountTendered && (amountTendered < cumAmount)){
-        $("#amountTenderedErr").html("Amount cannot be less than ₹;"+ cumAmount);
+        $("#amountTenderedErr").html("Amount cannot be less than &#8358;"+ cumAmount);
 
         //remove change due if any
         $("#changeDue").html("");

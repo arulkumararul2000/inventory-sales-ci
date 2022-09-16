@@ -23,7 +23,7 @@ if(isset($items) && !empty($items)){
             <div class="row">
                 <div class="col-sm-3">
                     <span class="pointer text-primary">
-                        <button class='btn btn-primary btn-sm' id='showTransForm'><i class="fa fa-plus"></i> New Transactions</button>
+                        <button class='btn btn-primary btn-sm' id='showTransForm'><i class="fa fa-plus"></i> New Transaction </button>
                     </span>
                 </div>
                 <div class="col-sm-3">
@@ -40,7 +40,7 @@ if(isset($items) && !empty($items)){
             <div class="row collapse" id="newTransDiv">
                 <!---div to display transaction form--->
                 <div class="col-sm-12" id="salesTransFormDiv">
-                    <div class="well glass">
+                    <div class="well">
                         <form name="salesTransForm" id="salesTransForm" role="form">
                             <div class="text-center errMsg" id='newTransErrMsg'></div>
                             <br>
@@ -60,7 +60,7 @@ if(isset($items) && !empty($items)){
                                         <br class="visible-xs">
                                         
                                         <div class="col-sm-2 form-group-sm">
-                                            <input type="text" id="barcodeText" class="form-control glass" placeholder="item code" autofocus>
+                                            <input type="text" id="barcodeText" class="form-control" placeholder="item code" autofocus>
                                             <span class="help-block errMsg" id="itemCodeNotFoundMsg"></span>
                                         </div>
                                     </div>
@@ -69,27 +69,27 @@ if(isset($items) && !empty($items)){
                                     
                                     <div class="row">
                                         <div class="col-sm-3 form-group-sm">
-                                            <label for="vat">GST(%)</label>
-                                            <input type="number" min="0" id="vat" class="form-control glass" value="0">
+                                            <label for="vat">VAT(%)</label>
+                                            <input type="number" min="0" id="vat" class="form-control" value="0">
                                         </div>
                                         
                                         <div class="col-sm-3 form-group-sm">
                                             <label for="discount">Discount(%)</label>
-                                            <input type="number" min="0" id="discount" class="form-control glass" value="0">
+                                            <input type="number" min="0" id="discount" class="form-control" value="0">
                                         </div>
                                         
                                         <div class="col-sm-3 form-group-sm">
                                             <label for="discount">Discount(value)</label>
-                                            <input type="number" min="0" id="discountValue" class="form-control glass" value="0">
+                                            <input type="number" min="0" id="discountValue" class="form-control" value="0">
                                         </div>
                                         
                                         <div class="col-sm-3 form-group-sm">
                                             <label for="modeOfPayment">Mode of Payment</label>
-                                            <select class="form-control checkField glass" id="modeOfPayment">
-                                                <option value="">Select</option>
+                                            <select class="form-control checkField" id="modeOfPayment">
+                                                <option value="">---</option>
                                                 <option value="Cash">Cash</option>
-                                                <option value="POS">Pay Online</option>
-                                                <option value="Cash and POS">Cash + Pay Online</option>
+                                                <option value="POS">POS</option>
+                                                <option value="Cash and POS">Cash and POS</option>
                                             </select>
                                             <span class="help-block errMsg" id="modeOfPaymentErr"></span>
                                         </div>
@@ -98,49 +98,49 @@ if(isset($items) && !empty($items)){
                                     <div class="row">
                                         <div class="col-sm-4 form-group-sm">
                                             <label for="cumAmount">Cumulative Amount</label>
-                                            <span id="cumAmount" class="form-control glass">0.00</span>
+                                            <span id="cumAmount" class="form-control">0.00</span>
                                         </div>
                                         
                                         <div class="col-sm-4 form-group-sm">
                                             <div class="cashAndPos hidden">
                                                 <label for="cashAmount">Cash</label>
-                                                <input type="text" class="form-control glass" id="cashAmount">
+                                                <input type="text" class="form-control" id="cashAmount">
                                                 <span class="help-block errMsg"></span>
                                             </div>
 
                                             <div class="cashAndPos hidden">
-                                                <label for="posAmount">Online Pay</label>
-                                                <input type="text" class="form-control glass" id="posAmount">
+                                                <label for="posAmount">POS</label>
+                                                <input type="text" class="form-control" id="posAmount">
                                                 <span class="help-block errMsg"></span>
                                             </div>
 
                                             <div id="amountTenderedDiv">
                                                 <label for="amountTendered" id="amountTenderedLabel">Amount Tendered</label>
-                                                <input type="text" class="form-control glass" id="amountTendered">
+                                                <input type="text" class="form-control" id="amountTendered">
                                                 <span class="help-block errMsg" id="amountTenderedErr"></span>
                                             </div>
                                         </div>
                                         
                                         <div class="col-sm-4 form-group-sm">
                                             <label for="changeDue">Change Due</label>
-                                            <span class="form-control glass" id="changeDue"></span>
+                                            <span class="form-control" id="changeDue"></span>
                                         </div>
                                     </div>
                                         
                                     <div class="row">
                                         <div class="col-sm-4 form-group-sm">
                                             <label for="custName">Customer Name</label>
-                                            <input type="text" id="custName" class="form-control glass" placeholder="Name">
+                                            <input type="text" id="custName" class="form-control" placeholder="Name">
                                         </div>
                                         
                                         <div class="col-sm-4 form-group-sm">
                                             <label for="custPhone">Customer Phone</label>
-                                            <input type="tel" id="custPhone" class="form-control glass" placeholder="Phone Number">
+                                            <input type="tel" id="custPhone" class="form-control" placeholder="Phone Number">
                                         </div>
                                         
                                         <div class="col-sm-4 form-group-sm">
                                             <label for="custEmail">Customer Email</label>
-                                            <input type="email" id="custEmail" class="form-control glass" placeholder="E-mail Address">
+                                            <input type="email" id="custEmail" class="form-control" placeholder="E-mail Address">
                                         </div>
                                     </div>
                                 </div>
@@ -148,9 +148,9 @@ if(isset($items) && !empty($items)){
 
                             <br>
                             <div class="row">
-                                <!-- <div class="col-sm-2 form-group-sm">
+                                <div class="col-sm-2 form-group-sm">
                                     <button class="btn btn-primary btn-sm" id='useScanner'>Use Barcode Scanner</button>
-                                </div> -->
+                                </div>
                                 <br class="visible-xs">
                                 <div class="col-sm-6"></div>
                                 <br class="visible-xs">
@@ -173,7 +173,7 @@ if(isset($items) && !empty($items)){
                 <div class="col-sm-12">
                     <div class="col-sm-3 form-inline form-group-sm">
                         <label for="transListPerPage">Per Page</label>
-                        <select id="transListPerPage" class="form-control glass">
+                        <select id="transListPerPage" class="form-control">
                             <option value="1">1</option>
                             <option value="5">5</option>
                             <option value="10" selected>10</option>
@@ -188,7 +188,7 @@ if(isset($items) && !empty($items)){
 
                     <div class="col-sm-5 form-group-sm form-inline">
                         <label for="transListSortBy">Sort by</label>
-                        <select id="transListSortBy" class="form-control glass">
+                        <select id="transListSortBy" class="form-control">
                             <option value="transId-DESC">date(Latest First)</option>
                             <option value="transId-ASC">date(Oldest First)</option>
                             <option value="quantity-DESC">Quantity (Highest first)</option>
@@ -202,7 +202,7 @@ if(isset($items) && !empty($items)){
 
                     <div class="col-sm-4 form-inline form-group-sm">
                         <label for='transSearch'><i class="fa fa-search"></i></label>
-                        <input type="search" id="transSearch" class="form-control glass" placeholder="Search Transactions">
+                        <input type="search" id="transSearch" class="form-control" placeholder="Search Transactions">
                     </div>
                 </div>
             </div>

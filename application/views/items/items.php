@@ -2,19 +2,19 @@
 defined('BASEPATH') OR exit('');
 ?>
 
-<div class=" hidden-print">   
+<div class="pwell hidden-print">   
     <div class="row">
         <div class="col-sm-12">
             <!-- sort and co row-->
             <div class="row">
                 <div class="col-sm-12">
                     <div class="col-sm-2 form-inline form-group-sm">
-                        <button class="btn btn-primary" id='createItem'>Add New Item</button>
+                        <button class="btn btn-primary btn-sm" id='createItem'>Add New Item</button>
                     </div>
 
                     <div class="col-sm-3 form-inline form-group-sm">
                         <label for="itemsListPerPage">Show</label>
-                        <select id="itemsListPerPage" class="form-control glass">
+                        <select id="itemsListPerPage" class="form-control">
                             <option value="1">1</option>
                             <option value="5">5</option>
                             <option value="10" selected>10</option>
@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('');
 
                     <div class="col-sm-4 form-group-sm form-inline">
                         <label for="itemsListSortBy">Sort by</label>
-                        <select id="itemsListSortBy" class="form-control glass">
+                        <select id="itemsListSortBy" class="form-control">
                             <option value="name-ASC">Item Name (A-Z)</option>
                             <option value="code-ASC">Item Code (Ascending)</option>
                             <option value="unitPrice-DESC">Unit Price (Highest first)</option>
@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('');
 
                     <div class="col-sm-3 form-inline form-group-sm">
                         <label for='itemSearch'><i class="fa fa-search"></i></label>
-                        <input type="search" id="itemSearch" class="form-control glass" placeholder="Search Items">
+                        <input type="search" id="itemSearch" class="form-control" placeholder="Search Items">
                     </div>
                 </div>
             </div>
@@ -59,8 +59,8 @@ defined('BASEPATH') OR exit('');
         <div class="col-sm-12">
             <!--Form to add/update an item-->
             <div class="col-sm-4 hidden" id='createNewItemDiv'>
-                <div class="well glass">
-                    <!-- <button class="btn btn-info btn-xs pull-left" id="useBarcodeScanner">Use Scanner</button> -->
+                <div class="well">
+                    <button class="btn btn-info btn-xs pull-left" id="useBarcodeScanner">Use Scanner</button>
                     <button class="close cancelAddItem">&times;</button><br>
                     <form name="addNewItemForm" id="addNewItemForm" role="form">
                         <div class="text-center errMsg" id='addCustErrMsg'></div>
@@ -72,7 +72,7 @@ defined('BASEPATH') OR exit('');
                                 <label for="itemCode">Item Code</label>
                                 <input type="text" id="itemCode" name="itemCode" placeholder="Item Code" maxlength="80"
                                     class="form-control" onchange="checkField(this.value, 'itemCodeErr')" autofocus>
-                                <!-- <span class="help-block"><input type="checkbox" id="gen4me"> auto-generate</span> -->
+                                <!--<span class="help-block"><input type="checkbox" id="gen4me"> auto-generate</span>-->
                                 <span class="help-block errMsg" id="itemCodeErr"></span>
                             </div>
                         </div>
@@ -97,8 +97,8 @@ defined('BASEPATH') OR exit('');
 
                         <div class="row">
                             <div class="col-sm-12 form-group-sm">
-                                <label for="unitPrice">(₹)Unit Price</label>
-                                <input type="text" id="itemPrice" name="itemPrice" placeholder="(₹)Unit Price" class="form-control"
+                                <label for="unitPrice">(&#8358;)Unit Price</label>
+                                <input type="text" id="itemPrice" name="itemPrice" placeholder="(&#8358;)Unit Price" class="form-control"
                                     onchange="checkField(this.value, 'itemPriceErr')">
                                 <span class="help-block errMsg" id="itemPriceErr"></span>
                             </div>

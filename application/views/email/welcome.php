@@ -6,7 +6,8 @@
     </head>
     <body>
         <p>Hi <?=$this->input->post('title')." ".$this->input->post('firstName')?>,<br>
-            Welcome
+            Welcome to Ibadan golf club. Find below your registration details and please do not hesitate to inform us if there is any 
+            mistake. Thanks.
         </p>
         <table style="text-align: left">
             <tbody>
@@ -42,7 +43,7 @@
                 <tr>
                     <th>Amount Deposited:</th>
                     <td></td>
-                    <td>$<?= number_format($this->input->post('amountDeposited'), 2)?></td>
+                    <td>&#8358;<?= number_format($this->input->post('amountDeposited'), 2)?></td>
                 </tr>
                 <tr>
                     <th>Street:</th>
@@ -66,5 +67,7 @@
                 </tr>
             </tbody>
         </table>
+        <p>We hope you enjoy your time with us.</p>
+        <p><small>The Manager, <br>Ibadan Golf Club</small></p>
     </body>
 </html>

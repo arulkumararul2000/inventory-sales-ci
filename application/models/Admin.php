@@ -1,7 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('');
 
-
+/**
+ * Description of Admin
+ *
+ * @author Amir <amirsanni@gmail.com>
+ * @date 31st Jan, 2016
+ */
 class Admin extends CI_Model{
     public function __construct(){
         parent::__construct();

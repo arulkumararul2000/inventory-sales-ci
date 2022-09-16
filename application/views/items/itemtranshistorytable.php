@@ -6,7 +6,7 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>S.No</th>
+                <th>SN</th>
                 <th>ITEM CODE</th>
                 <th>ITEM NAME</th>
                 <th>DESCRIPTION</th>
@@ -26,7 +26,7 @@
                         20kg of locally made ofada rice
                     </span>
                 </td>
-                <td>₹3,500</td>
+                <td>&#8358;3,500</td>
                 <td>187</td>
                 <td>
                     <a class="pointer" onclick="">Transaction history</a>
@@ -43,7 +43,7 @@
                         20kg of locally made ofada rice
                     </span>
                 </td>
-                <td>₹3,500</td>
+                <td>&#8358;3,500</td>
                 <td>187</td>
                 <td>
                     <a class="pointer" onclick="">Transaction history</a>

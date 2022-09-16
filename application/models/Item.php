@@ -1,7 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('');
 
-
+/**
+ * Description of Customer
+ *
+ * @author Amir <amirsanni@gmail.com>
+ * @date 4th RabThaani, 1437AH (15th Jan, 2016)
+ */
 class Item extends CI_Model{
     public function __construct(){
         parent::__construct();

@@ -58,7 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
                             <div style="font-size:100px">
-                                <h1><img src="<?=base_url()?>public/images/logo_black2.png" alt="1410-logo" height="150px"></h1>
+                                <h1><img src="<?=base_url()?>public/images/logo_white.png" alt="1410-logo" height="150px"></h1>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="bg-primary text-center">
                                 <span id="errMsg"></span>
                             </div>
-                            <div class="well glass">
+                            <div class="form-bottom">
                                 <form id="loginForm">
                                     <div class="form-group">
                                         <label class="sr-only" for="email">E-mail</label>
@@ -77,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <label class="sr-only" for="password">Password</label>
                                         <input type="password" placeholder="Password" class="form-control checkField" id="password" >
                                     </div>
-                                    <button type="submit" class="btn btn-success">Login</button>
+                                    <button type="submit" class="btn">Log in!</button>
                                 </form>
                             </div>
                         </div>
@@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     
                     <div class="row">
                         <div class="col-sm-12 text-center" style="color:white">
-                            Designed and Developed by <b>Innovation Infotech</b>
+                            Designed and Developed by <a href="http://www.amirsanni.com/" target='_blank' class="text-primary">Amir Sanni</a> (2016)
                         </div>
                     </div>
                 </div>

@@ -3,57 +3,42 @@ defined('BASEPATH') OR exit('');
 ?>
 
 <div class="row latestStuffs">
-    <div class="col-sm-3">
-        <div class="panel panel-info glass">
-            <div class="panel-body glass latestStuffsBody" style="background-color: #b71c1c">
-                <div class="pull-left"><i class="fa fa-cubes"></i></div>
-                <div class="pull-right">
-                    <div><?=$totalItems?></div>
-                    <div class="latestStuffsText pull-right">Items in Stock</div>
-                </div>
-            </div>
-            <div class="panel-footer text-center" style="color:#b71c1c">Total Items in Stock</div>
-        </div>
-    </div>
-    <div class="col-sm-3">
-        <div class="panel panel-info glass">
-            <div class="panel-body glass latestStuffsBody" style="background-color: #5cb85c">
-                <div class="pull-left"><i class="fa fa-cart-arrow-down"></i></div>
+    <div class="col-sm-4">
+        <div class="panel panel-info">
+            <div class="panel-body latestStuffsBody" style="background-color: #5cb85c">
+                <div class="pull-left"><i class="fa fa-exchange"></i></div>
                 <div class="pull-right">
                     <div><?=$totalSalesToday?></div>
-                    <div class="latestStuffsText">Today's Total Sales</div>
+                    <div class="latestStuffsText">Total Sales Today</div>
                 </div>
             </div>
             <div class="panel-footer text-center" style="color:#5cb85c">Number of Items Sold Today</div>
         </div>
     </div>
-    <div class="col-sm-3">
-        <div class="panel panel-info glass">
-            <div class="panel-body glass latestStuffsBody" style="background-color: #607d8b">
-                <div class="pull-left"><i class="fa fa-exchange"></i></div>
+    <div class="col-sm-4">
+        <div class="panel panel-info">
+            <div class="panel-body latestStuffsBody" style="background-color: #f0ad4e">
+                <div class="pull-left"><i class="fa fa-tasks"></i></div>
                 <div class="pull-right">
                     <div><?=$totalTransactions?></div>
                     <div class="latestStuffsText pull-right">Total Transactions</div>
                 </div>
             </div>
-            <div class="panel-footer text-center" style="color:#607d8b">All-Time Total Transactions</div>
+            <div class="panel-footer text-center" style="color:#f0ad4e">All-time Total Transactions</div>
         </div>
     </div>
-
-    <div class="col-sm-3">
-        <div class="panel panel-info glass">
-            <div class="panel-body glass latestStuffsBody" style="background-color:#795548">
-                <div class="pull-left"><i class="fa fa-money"></i></div>
+    <div class="col-sm-4">
+        <div class="panel panel-info">
+            <div class="panel-body latestStuffsBody" style="background-color: #337ab7">
+                <div class="pull-left"><i class="fa fa-shopping-cart"></i></div>
                 <div class="pull-right">
-                    <div> <?php $query = $this->db->query('SELECT SUM( totalPrice)as total FROM transactions')->row(); echo floatval($query->total);?></div>
-                    <div class="latestStuffsText pull-right">Total Earnings</div>
+                    <div><?=$totalItems?></div>
+                    <div class="latestStuffsText pull-right">Items in Stock</div>
                 </div>
-                
             </div>
-            <div class="panel-footer text-center" style="color#795548">All-Time Total Earnings</div>
+            <div class="panel-footer text-center" style="color:#337ab7">Total Items in Stock</div>
         </div>
     </div>
-   
 </div>
 
 
@@ -96,7 +81,7 @@ defined('BASEPATH') OR exit('');
 <div class="row margin-top-5">
     <div class="col-sm-3">
         <div class="panel panel-hash">
-            <div class="panel-heading"><i class="fa fa-level-up"></i> HIGH IN DEMAND</div>
+            <div class="panel-heading"><i class="fa fa-cart-plus"></i> HIGH IN DEMAND</div>
             <?php if($topDemanded): ?>
             <table class="table table-striped table-responsive table-hover">
                 <thead>
@@ -122,7 +107,7 @@ defined('BASEPATH') OR exit('');
     
     <div class="col-sm-3">
         <div class="panel panel-hash">
-            <div class="panel-heading"><i class="fa fa-level-down"></i> LOW IN DEMAND</div>
+            <div class="panel-heading"><i class="fa fa-cart-arrow-down"></i> LOW IN DEMAND</div>
             <?php if($leastDemanded): ?>
             <table class="table table-striped table-responsive table-hover">
                 <thead>
@@ -148,7 +133,7 @@ defined('BASEPATH') OR exit('');
     
     <div class="col-sm-3">
         <div class="panel panel-hash">
-            <div class="panel-heading"><i class="fa fa-dollar"></i> HIGHEST EARNING</div>
+            <div class="panel-heading"><i class="fa fa-money"></i> HIGHEST EARNING</div>
             <?php if($highestEarners): ?>
             <table class="table table-striped table-responsive table-hover">
                 <thead>
@@ -161,7 +146,7 @@ defined('BASEPATH') OR exit('');
                 <?php foreach($highestEarners as $get):?>
                     <tr>
                         <td><?=$get->name?></td>
-                        <td>$<?=number_format($get->totEarned, 2)?></td>
+                        <td>&#8358;<?=number_format($get->totEarned, 2)?></td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
@@ -174,7 +159,7 @@ defined('BASEPATH') OR exit('');
     
     <div class="col-sm-3">
         <div class="panel panel-hash">
-            <div class="panel-heading"><i class="fa fa-dollar"></i> LOWEST EARNING</div>
+            <div class="panel-heading"><i class="fa fa-money"></i> LOWEST EARNING</div>
             <?php if($lowestEarners): ?>
             <table class="table table-striped table-responsive table-hover">
                 <thead>
@@ -187,7 +172,7 @@ defined('BASEPATH') OR exit('');
                 <?php foreach($lowestEarners as $get):?>
                     <tr>
                         <td><?=$get->name?></td>
-                        <td>$<?=number_format($get->totEarned, 2)?></td>
+                        <td>&#8358;<?=number_format($get->totEarned, 2)?></td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
@@ -229,7 +214,7 @@ defined('BASEPATH') OR exit('');
                             </td>
                             <td><?=$get->qty_sold?></td>
                             <td><?=$get->tot_trans?></td>
-                            <td>$<?=number_format($get->tot_earned, 2)?></td>
+                            <td>&#8358;<?=number_format($get->tot_earned, 2)?></td>
                         </tr>
                         <?php endforeach;?>
                     </tbody>
@@ -263,7 +248,7 @@ defined('BASEPATH') OR exit('');
                             <td><?=$get->day?>s</td>
                             <td><?=$get->qty_sold?></td>
                             <td><?=$get->tot_trans?></td>
-                            <td>$<?=number_format($get->tot_earned, 2)?></td>
+                            <td>&#8358;<?=number_format($get->tot_earned, 2)?></td>
                         </tr>
                         <?php endforeach;?>
                     </tbody>
@@ -300,7 +285,7 @@ defined('BASEPATH') OR exit('');
                             <td><?=$get->month?></td>
                             <td><?=$get->qty_sold?></td>
                             <td><?=$get->tot_trans?></td>
-                            <td>$<?=number_format($get->tot_earned, 2)?></td>
+                            <td>&#8358;<?=number_format($get->tot_earned, 2)?></td>
                         </tr>
                         <?php endforeach;?>
                     </tbody>
@@ -334,7 +319,7 @@ defined('BASEPATH') OR exit('');
                             <td><?=$get->year?></td>
                             <td><?=$get->qty_sold?></td>
                             <td><?=$get->tot_trans?></td>
-                            <td>$<?=number_format($get->tot_earned, 2)?></td>
+                            <td>&#8358;<?=number_format($get->tot_earned, 2)?></td>
                         </tr>
                         <?php endforeach;?>
                     </tbody>

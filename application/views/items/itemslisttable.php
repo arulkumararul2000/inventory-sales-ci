@@ -4,18 +4,18 @@
     <?= isset($range) && !empty($range) ? $range : ""; ?>
 </div>
 
-<div class='col-sm-6 text-right'><b>Items Total Worth/Price:</b> ₹<?=$cum_total ? number_format($cum_total, 2) : '0.00'?></div>
+<div class='col-sm-6 text-right'><b>Items Total Worth/Price:</b> &#8358;<?=$cum_total ? number_format($cum_total, 2) : '0.00'?></div>
 
 <div class='col-xs-12'>
-    <div class="panel panel-primary glass">
+    <div class="panel panel-primary">
         <!-- Default panel contents -->
         <div class="panel-heading">Items</div>
         <?php if($allItems): ?>
         <div class="table table-responsive">
-            <table class="table table-bordered table-striped table-hover" style="background-color: #f5f5f5">
+            <table class="table table-bordered table-striped" style="background-color: #f5f5f5">
                 <thead>
                     <tr>
-                        <th>S.No</th>
+                        <th>SN</th>
                         <th>ITEM NAME</th>
                         <th>ITEM CODE</th>
                         <th>DESCRIPTION</th>
@@ -43,10 +43,10 @@
                         <td class="<?=$get->quantity <= 10 ? 'bg-danger' : ($get->quantity <= 25 ? 'bg-warning' : '')?>">
                             <span id="itemQuantity-<?=$get->id?>"><?=$get->quantity?></span>
                         </td>
-                        <td>₹<span id="itemPrice-<?=$get->id?>"><?=number_format($get->unitPrice, 2)?></span></td>
+                        <td>&#8358;<span id="itemPrice-<?=$get->id?>"><?=number_format($get->unitPrice, 2)?></span></td>
                         <td><?=$this->genmod->gettablecol('transactions', 'SUM(quantity)', 'itemCode', $get->code)?></td>
                         <td>
-                        ₹<?=number_format($this->genmod->gettablecol('transactions', 'SUM(totalPrice)', 'itemCode', $get->code), 2)?>
+                            &#8358;<?=number_format($this->genmod->gettablecol('transactions', 'SUM(totalPrice)', 'itemCode', $get->code), 2)?>
                         </td>
                         <td><a class="pointer updateStock" id="stock-<?=$get->id?>">Update Quantity</a></td>
                         <td class="text-center text-primary">
