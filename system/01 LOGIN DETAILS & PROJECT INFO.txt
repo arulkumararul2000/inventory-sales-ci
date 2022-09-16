@@ -1,0 +1,6 @@
+**Database Name: inventorysalesci**
+
+**Admin Login Details**
+
+Email   : admin@gmail.com
+Password: Password@123
