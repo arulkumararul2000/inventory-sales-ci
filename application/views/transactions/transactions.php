@@ -16,19 +16,19 @@ if(isset($items) && !empty($items)){
     var currentItems = <?=json_encode($current_items)?>;
 </script>
 
-<div class="pwell hidden-print">   
+<div class="well hidden-print glass">   
     <div class="row">
         <div class="col-sm-12">
             <!--- Row to create new transaction-->
             <div class="row">
                 <div class="col-sm-3">
                     <span class="pointer text-primary">
-                        <button class='btn btn-primary btn-sm' id='showTransForm'><i class="fa fa-plus"></i> New Transactions</button>
+                        <button class='btn btn-success btn-sm' id='showTransForm'><i class="fa fa-plus"></i> New Transactions</button>
                     </span>
                 </div>
                 <div class="col-sm-3">
                     <span class="pointer text-primary">
-                        <button class='btn btn-primary btn-sm' data-toggle='modal' data-target='#reportModal'>
+                        <button class='btn btn-success btn-sm' data-toggle='modal' data-target='#reportModal'>
                             <i class="fa fa-newspaper-o"></i> Generate Report 
                         </button>
                     </span>
@@ -54,7 +54,7 @@ if(isset($items) && !empty($items)){
                                     <!--- Text to click to add another item to transaction-->
                                     <div class="row">
                                         <div class="col-sm-2 text-primary pointer">
-                                            <button class="btn btn-primary btn-sm" id="clickToClone"><i class="fa fa-plus"></i> Add item</button>
+                                            <button class="btn btn-success btn-sm" id="clickToClone"><i class="fa fa-plus"></i> Add item</button>
                                         </div>
                                         
                                         <br class="visible-xs">
@@ -68,22 +68,22 @@ if(isset($items) && !empty($items)){
                                     <br>
                                     
                                     <div class="row">
-                                        <div class="col-sm-3 form-group-sm">
+                                        <div class="col-sm-3 form-group-sm hidden">
                                             <label for="vat">GST(%)</label>
                                             <input type="number" min="0" id="vat" class="form-control glass" value="0">
                                         </div>
                                         
-                                        <div class="col-sm-3 form-group-sm">
+                                        <div class="col-sm-4 form-group-sm">
                                             <label for="discount">Discount(%)</label>
                                             <input type="number" min="0" id="discount" class="form-control glass" value="0">
                                         </div>
                                         
-                                        <div class="col-sm-3 form-group-sm">
+                                        <div class="col-sm-4 form-group-sm">
                                             <label for="discount">Discount(value)</label>
                                             <input type="number" min="0" id="discountValue" class="form-control glass" value="0">
                                         </div>
                                         
-                                        <div class="col-sm-3 form-group-sm">
+                                        <div class="col-sm-4 form-group-sm">
                                             <label for="modeOfPayment">Mode of Payment</label>
                                             <select class="form-control checkField glass" id="modeOfPayment">
                                                 <option value="">Select</option>
@@ -115,9 +115,9 @@ if(isset($items) && !empty($items)){
                                             </div>
 
                                             <div id="amountTenderedDiv">
-                                                <label for="amountTendered" id="amountTenderedLabel">Amount Tendered</label>
+                                                <label for="amountTendered" >Amount(Paid by Customer)</label> <!--id="amountTenderedLabel"-->
                                                 <input type="text" class="form-control glass" id="amountTendered">
-                                                <span class="help-block errMsg" id="amountTenderedErr"></span>
+                                                <!-- <span class="help-block errMsg" id="amountTenderedErr"></span> -->
                                             </div>
                                         </div>
                                         
@@ -155,7 +155,7 @@ if(isset($items) && !empty($items)){
                                 <div class="col-sm-6"></div>
                                 <br class="visible-xs">
                                 <div class="col-sm-4 form-group-sm">
-                                    <button type="button" class="btn btn-primary btn-sm" id="confirmSaleOrder">Confirm Order</button>
+                                    <button type="button" class="btn btn-success btn-sm" id="confirmSaleOrder">Confirm Order</button>
                                     <button type="button" class="btn btn-danger btn-sm" id="cancelSaleOrder">Clear Order</button>
                                     <button type="button" class="btn btn-danger btn-sm" id="hideTransForm">Close</button>
                                 </div>

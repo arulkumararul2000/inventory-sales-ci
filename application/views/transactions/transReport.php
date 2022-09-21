@@ -3,11 +3,6 @@ defined('BASEPATH') OR exit('');
 
 $total_earned = 0;
 
-/**
- * @fileName transReport
- * @author Ameer <amirsanni@gmail.com>
- * @date 06-Apr-2017
- */
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -36,7 +31,7 @@ $total_earned = 0;
         <div class="container margin-top-5">
             <div class="row">
                 <div class="col-xs-12 text-right hidden-print">
-                    <button class="btn btn-primary btn-sm" onclick="window.print()">Print Report</button>
+                    <button class="btn btn-success btn-sm" onclick="window.print()">Print Report</button>
                 </div>
             </div>
             
@@ -101,7 +96,7 @@ $total_earned = 0;
             
             <div class="row" style="margin-bottom: 10px">
                 <div class="col-xs-6">
-                    <button class="btn btn-primary btn-sm hidden-print" onclick="window.print()">Print Report</button>
+                    <button class="btn btn-success btn-sm hidden-print" onclick="window.print()">Print Report</button>
                 </div>
                 
                 <div class="col-xs-6 text-right">

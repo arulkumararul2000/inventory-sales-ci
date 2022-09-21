@@ -19,10 +19,7 @@ class Logout extends CI_Controller {
         
         //unset($_SESSION['userId']);
         
-        /*
-         * unset all cookies
-         * Thanks to http://stackoverflow.com/questions/2310558/how-to-delete-all-cookies-of-my-website-in-php
-         */
+
         if (isset($_SERVER['HTTP_COOKIE'])) {
             $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
             foreach($cookies as $cookie) {

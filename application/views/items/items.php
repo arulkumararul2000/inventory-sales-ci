@@ -2,14 +2,14 @@
 defined('BASEPATH') OR exit('');
 ?>
 
-<div class=" hidden-print">   
+<div class="glass well hidden-print">   
     <div class="row">
         <div class="col-sm-12">
             <!-- sort and co row-->
             <div class="row">
                 <div class="col-sm-12">
                     <div class="col-sm-2 form-inline form-group-sm">
-                        <button class="btn btn-primary" id='createItem'>Add New Item</button>
+                        <button class="btn btn-success" id='createItem'>Add New Item</button>
                     </div>
 
                     <div class="col-sm-3 form-inline form-group-sm">
@@ -60,7 +60,7 @@ defined('BASEPATH') OR exit('');
             <!--Form to add/update an item-->
             <div class="col-sm-4 hidden" id='createNewItemDiv'>
                 <div class="well glass">
-                    <!-- <button class="btn btn-info btn-xs pull-left" id="useBarcodeScanner">Use Scanner</button> -->
+                    <button class="btn btn-info btn-xs pull-left" id="useBarcodeScanner">Use Scanner</button>
                     <button class="close cancelAddItem">&times;</button><br>
                     <form name="addNewItemForm" id="addNewItemForm" role="form">
                         <div class="text-center errMsg" id='addCustErrMsg'></div>
@@ -72,7 +72,7 @@ defined('BASEPATH') OR exit('');
                                 <label for="itemCode">Item Code</label>
                                 <input type="text" id="itemCode" name="itemCode" placeholder="Item Code" maxlength="80"
                                     class="form-control" onchange="checkField(this.value, 'itemCodeErr')" autofocus>
-                                <!-- <span class="help-block"><input type="checkbox" id="gen4me"> auto-generate</span> -->
+                                <span class="help-block"><input type="checkbox" id="gen4me"> auto-generate</span>
                                 <span class="help-block errMsg" id="itemCodeErr"></span>
                             </div>
                         </div>
@@ -114,7 +114,7 @@ defined('BASEPATH') OR exit('');
                         <br>
                         <div class="row text-center">
                             <div class="col-sm-6 form-group-sm">
-                                <button class="btn btn-primary btn-sm" id="addNewItem">Add Item</button>
+                                <button class="btn btn-success btn-sm" id="addNewItem">Add Item</button>
                             </div>
 
                             <div class="col-sm-6 form-group-sm">
@@ -199,7 +199,7 @@ defined('BASEPATH') OR exit('');
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" id="stockUpdateSubmit">Update</button>
+                <button class="btn btn-success" id="stockUpdateSubmit">Update</button>
                 <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
             </div>
         </div>
@@ -250,7 +250,7 @@ defined('BASEPATH') OR exit('');
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" id="editItemSubmit">Save</button>
+                <button class="btn btn-success" id="editItemSubmit">Save</button>
                 <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
             </div>
         </div>

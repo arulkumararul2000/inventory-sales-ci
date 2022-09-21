@@ -5,26 +5,26 @@ defined('BASEPATH') OR exit('');
 <div class="row latestStuffs">
     <div class="col-sm-3">
         <div class="panel panel-info glass">
-            <div class="panel-body glass latestStuffsBody" style="background-color: #b71c1c">
+            <div class="panel-body glass latestStuffsBody" style="background-color: #607d8b">
                 <div class="pull-left"><i class="fa fa-cubes"></i></div>
                 <div class="pull-right">
                     <div><?=$totalItems?></div>
                     <div class="latestStuffsText pull-right">Items in Stock</div>
                 </div>
             </div>
-            <div class="panel-footer text-center" style="color:#b71c1c">Total Items in Stock</div>
+            <div class="panel-footer text-center" style="color:#607d8b">Total Items in Stock</div>
         </div>
     </div>
     <div class="col-sm-3">
         <div class="panel panel-info glass">
-            <div class="panel-body glass latestStuffsBody" style="background-color: #5cb85c">
+            <div class="panel-body glass latestStuffsBody" style="background-color: #607d8b">
                 <div class="pull-left"><i class="fa fa-cart-arrow-down"></i></div>
                 <div class="pull-right">
                     <div><?=$totalSalesToday?></div>
                     <div class="latestStuffsText">Today's Total Sales</div>
                 </div>
             </div>
-            <div class="panel-footer text-center" style="color:#5cb85c">Number of Items Sold Today</div>
+            <div class="panel-footer text-center" style="color:#607d8b">Number of Items Sold Today</div>
         </div>
     </div>
     <div class="col-sm-3">
@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('');
 
     <div class="col-sm-3">
         <div class="panel panel-info glass">
-            <div class="panel-body glass latestStuffsBody" style="background-color:#795548">
+            <div class="panel-body glass latestStuffsBody" style="background-color:#607d8b">
                 <div class="pull-left"><i class="fa fa-money"></i></div>
                 <div class="pull-right">
                     <div> <?php $query = $this->db->query('SELECT SUM( totalPrice)as total FROM transactions')->row(); echo floatval($query->total);?></div>
@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('');
                 </div>
                 
             </div>
-            <div class="panel-footer text-center" style="color#795548">All-Time Total Earnings</div>
+            <div class="panel-footer text-center" style="color:#607d8b">All-Time Total Earnings</div>
         </div>
     </div>
    
@@ -60,21 +60,23 @@ defined('BASEPATH') OR exit('');
 <!-- ROW OF GRAPH/CHART OF EARNINGS PER MONTH/YEAR-->
 <div class="row margin-top-5">
     <div class="col-sm-9">
-        <div class="box">
-            <div class="box-header" style="background-color:/*#33c9dd*/#333;">
-              <h3 class="box-title" id="earningsTitle"></h3>
+        <div class="glass">
+            <div class="box-header glass" style="background-color:/*#33c9dd*/#f2f2f2;">
+                <div style="margin-left: 20px;">
+                    <h3 class="box-title" id="earningsTitle"></h3>
+                </div>
             </div>
 
-            <div class="box-body" style="background-color:/*#33c9dd*/#333;">
+            <div class="box-body glass" style="background-color:/*#33c9dd*/#333;">
               <canvas style="padding-right:25px" id="earningsGraph" width="200" height="80"/></canvas>
             </div>
         </div>
     </div>
 
     <div class="col-sm-3">
-        <section class="panel form-group-sm">
+        <section class="panel form-group-sm glass">
             <label class="control-label">Select Account Year:</label>
-            <select class="form-control" id="earningAndExpenseYear">
+            <select class="form-control glass" id="earningAndExpenseYear">
                 <?php $years = range("2016", date('Y')); ?>
                 <?php foreach($years as $y):?>
                 <option value="<?=$y?>" <?=$y == date('Y') ? 'selected' : ''?>><?=$y?></option>
@@ -83,7 +85,7 @@ defined('BASEPATH') OR exit('');
             <span id="yearAccountLoading"></span>
         </section>
         
-        <section class="panel">
+        <section class="panel glass">
           <center>
               <canvas id="paymentMethodChart" width="200" height="200"/></canvas><br>Payment Methods(%)<span id="paymentMethodYear"></span>
           </center>
@@ -95,7 +97,7 @@ defined('BASEPATH') OR exit('');
 <!-- ROW OF SUMMARY -->
 <div class="row margin-top-5">
     <div class="col-sm-3">
-        <div class="panel panel-hash">
+        <div class="panel panel-hash glass">
             <div class="panel-heading"><i class="fa fa-level-up"></i> HIGH IN DEMAND</div>
             <?php if($topDemanded): ?>
             <table class="table table-striped table-responsive table-hover">
@@ -121,7 +123,7 @@ defined('BASEPATH') OR exit('');
     </div>
     
     <div class="col-sm-3">
-        <div class="panel panel-hash">
+        <div class="panel panel-hash glass">
             <div class="panel-heading"><i class="fa fa-level-down"></i> LOW IN DEMAND</div>
             <?php if($leastDemanded): ?>
             <table class="table table-striped table-responsive table-hover">
@@ -147,8 +149,8 @@ defined('BASEPATH') OR exit('');
     </div>
     
     <div class="col-sm-3">
-        <div class="panel panel-hash">
-            <div class="panel-heading"><i class="fa fa-dollar"></i> HIGHEST EARNING</div>
+        <div class="panel panel-hash glass">
+            <div class="panel-heading"><i class="fa fa-money"></i> HIGHEST EARNING</div>
             <?php if($highestEarners): ?>
             <table class="table table-striped table-responsive table-hover">
                 <thead>
@@ -161,7 +163,7 @@ defined('BASEPATH') OR exit('');
                 <?php foreach($highestEarners as $get):?>
                     <tr>
                         <td><?=$get->name?></td>
-                        <td>$<?=number_format($get->totEarned, 2)?></td>
+                        <td>₹<?=number_format($get->totEarned, 2)?></td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
@@ -173,8 +175,8 @@ defined('BASEPATH') OR exit('');
     </div>
     
     <div class="col-sm-3">
-        <div class="panel panel-hash">
-            <div class="panel-heading"><i class="fa fa-dollar"></i> LOWEST EARNING</div>
+        <div class="panel panel-hash glass">
+            <div class="panel-heading"><i class="fa fa-money"></i> LOWEST EARNING</div>
             <?php if($lowestEarners): ?>
             <table class="table table-striped table-responsive table-hover">
                 <thead>
@@ -187,7 +189,7 @@ defined('BASEPATH') OR exit('');
                 <?php foreach($lowestEarners as $get):?>
                     <tr>
                         <td><?=$get->name?></td>
-                        <td>$<?=number_format($get->totEarned, 2)?></td>
+                        <td>₹<?=number_format($get->totEarned, 2)?></td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
@@ -202,7 +204,7 @@ defined('BASEPATH') OR exit('');
 
 <div class="row">
     <div class="col-sm-6">
-        <div class="panel panel-hash">
+        <div class="panel panel-hash glass">
             <div class="panel-heading">Daily Transactions</div>
             <div class="panel-body scroll panel-height">
                 <?php if(isset($dailyTransactions) && $dailyTransactions): ?>
@@ -229,7 +231,7 @@ defined('BASEPATH') OR exit('');
                             </td>
                             <td><?=$get->qty_sold?></td>
                             <td><?=$get->tot_trans?></td>
-                            <td>$<?=number_format($get->tot_earned, 2)?></td>
+                            <td>₹<?=number_format($get->tot_earned, 2)?></td>
                         </tr>
                         <?php endforeach;?>
                     </tbody>
@@ -243,7 +245,7 @@ defined('BASEPATH') OR exit('');
     
     
     <div class="col-sm-6">
-        <div class="panel panel-hash">
+        <div class="panel panel-hash glass">
             <div class="panel-heading">Transactions by Days</div>
             <div class="panel-body scroll panel-height">
                 <?php if(isset($transByDays) && $transByDays): ?>
@@ -263,7 +265,7 @@ defined('BASEPATH') OR exit('');
                             <td><?=$get->day?>s</td>
                             <td><?=$get->qty_sold?></td>
                             <td><?=$get->tot_trans?></td>
-                            <td>$<?=number_format($get->tot_earned, 2)?></td>
+                            <td>₹<?=number_format($get->tot_earned, 2)?></td>
                         </tr>
                         <?php endforeach;?>
                     </tbody>
@@ -280,7 +282,7 @@ defined('BASEPATH') OR exit('');
 
 <div class="row">
     <div class="col-sm-6">
-        <div class="panel panel-hash">
+        <div class="panel panel-hash glass">
             <div class="panel-heading">Transactions by Months</div>
             <div class="panel-body scroll panel-height">
                 <?php if(isset($transByMonths) && $transByMonths): ?>
@@ -300,7 +302,7 @@ defined('BASEPATH') OR exit('');
                             <td><?=$get->month?></td>
                             <td><?=$get->qty_sold?></td>
                             <td><?=$get->tot_trans?></td>
-                            <td>$<?=number_format($get->tot_earned, 2)?></td>
+                            <td>₹<?=number_format($get->tot_earned, 2)?></td>
                         </tr>
                         <?php endforeach;?>
                     </tbody>
@@ -314,7 +316,7 @@ defined('BASEPATH') OR exit('');
     
     
     <div class="col-sm-6">
-        <div class="panel panel-hash">
+        <div class="panel panel-hash glass">
             <div class="panel-heading">Transactions by Years</div>
             <div class="panel-body scroll panel-height">
                 <?php if(isset($transByYears) && $transByYears): ?>
@@ -334,7 +336,7 @@ defined('BASEPATH') OR exit('');
                             <td><?=$get->year?></td>
                             <td><?=$get->qty_sold?></td>
                             <td><?=$get->tot_trans?></td>
-                            <td>$<?=number_format($get->tot_earned, 2)?></td>
+                            <td>₹<?=number_format($get->tot_earned, 2)?></td>
                         </tr>
                         <?php endforeach;?>
                     </tbody>

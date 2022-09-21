@@ -6,15 +6,15 @@ defined('BASEPATH') OR exit('');
 <div class="panel panel-primary">
     <div class="panel-heading">ADMINISTRATOR ACCOUNTS</div>
     <?php if($allAdministrators):?>
-    <div class="table table-responsive">
+    <div class="table table-responsive glass">
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
                     <th>S.No</th>
                     <th>NAME</th>
                     <th>E-MAIL</th>
-                    <th>MOBILE</th>
-                    <th>WORK</th>
+                    <th>MOBILE 1</th>
+                    <th>MOBILE 2</th>
                     <th>ROLE</th>
                     <th>DATE CREATED</th>
                     <th>LAST LOG IN</th>

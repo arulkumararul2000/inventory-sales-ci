@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('');
     <?php $init_total = 0; ?>
     <?php foreach($allTransInfo as $get):?>
         <div class="row">
-            <div class="col-xs-4"><?=ellipsize($get['itemName'], 10);?></div>
+            <div class="col-xs-4"><?=ellipsize($get['itemName'], 20);?></div>
             <div class="col-xs-4"><?=$get['quantity'] . "x" .number_format($get['unitPrice'], 2)?></div>
             <div class="col-xs-4"><?=number_format($get['totalPrice'], 2)?></div>
         </div>
@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('');
             <?php if($vatPercentage > 0): ?>
             <b>GST(<?=$vatPercentage?>%): $<?=isset($vatAmount) ? number_format($vatAmount, 2) : ""?></b>
             <?php else: ?>
-            GST inclusive
+            <!-- GST inclusive -->
             <?php endif; ?>
         </div>
     </div>      
@@ -108,7 +108,7 @@ defined('BASEPATH') OR exit('');
 <div class="row hidden-print">
     <div class="col-sm-12">
         <div class="text-center">
-            <button type="button" class="btn btn-primary ptr">
+            <button type="button" class="btn btn-success ptr">
                 <i class="fa fa-print"></i> Print Receipt
             </button>
             

@@ -161,7 +161,7 @@ defined('BASEPATH') OR exit('');
                                 </tbody>
                             </table>
                             <div class="text-center">
-                                <button type="button" class="btn btn-primary">View User's Transactions</button>
+                                <button type="button" class="btn btn-success">View User's Transactions</button>
                             </div>
                         </div>
                     </div>
@@ -240,7 +240,7 @@ defined('BASEPATH') OR exit('');
                 </form>
             </div>
             <div class="modal-footer">
-                <button type='button' id='addCust' class="btn btn-primary">Add Customer</button>
+                <button type='button' id='addCust' class="btn btn-success">Add Customer</button>
                 <button type='button' class="btn btn-danger" data-dismiss='modal'>Close</button>
             </div>
         </div>
@@ -315,7 +315,7 @@ defined('BASEPATH') OR exit('');
                 </form>
             </div>
             <div class="modal-footer">
-                <button type='button' id='editCust' class="btn btn-primary">Update</button>
+                <button type='button' id='editCust' class="btn btn-success">Update</button>
                 <button type='button' class="btn btn-danger" data-dismiss='modal'>Close</button>
             </div>
         </div>

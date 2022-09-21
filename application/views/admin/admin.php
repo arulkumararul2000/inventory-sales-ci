@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('');
 
 <div class="row hidden-print">
     <div class="col-sm-12">
-        <div class="well">
+        <div class="well glass">
             <!-- Header (add new admin, sort order etc.) -->
             <div class="row">
                 <div class="col-sm-12">

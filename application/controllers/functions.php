@@ -256,14 +256,7 @@ function allowedName($name){
 
 
 
-/**
- * @description function to generate random string with an underscore in between
- * @param string $codeType string to pass as 2nd param to random_string() e.g. alnum, numeric
- * @param int $minLength minimum length of string to generate
- * @param int $maxLength maximum length of string to generate
- * @param string $delimiter [optional] The string to put in between the first and second strings Default is underscore
- * @return string $code the new randomly generated code
- */
+
 function generateRandomCode($codeType, $minLength, $maxLength, $delimiter = "_"){
     $totLength = rand($minLength, $maxLength-1);
     
@@ -342,9 +335,4 @@ function unsubscribeLink($userEmail, $userId, $userCode, $subsciptionType){
    $unsubscribeLink = base_url()."subscription/unsubscribe/$random/$userCode/$subsciptionType/$urlEmail/$userId/$rand";
 
    return $unsubscribeLink;
-}
-
-
-function igcEmail(){
-    return "ibadangolfclub@gmail.com";
 }

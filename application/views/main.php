@@ -243,7 +243,7 @@ defined('BASEPATH') OR exit('');
             </div>
         </div>
 
-        <footer class="container-fluid text-center hidden-print">
+        <footer class="container-fluid text-center hidden-print glass">
             <p>
                 <i class="fa fa-copyright"></i>
                 Developed By Innovation Infotech <?=date('Y')?>
@@ -282,7 +282,7 @@ defined('BASEPATH') OR exit('');
         <div class="modal fade" role='dialog' data-backdrop='static' id='logInModal'>
             <div class="modal-dialog">
                 <!-- Log in div below-->
-                <div class="modal-content">
+                <div class="modal-content glass">
                     <div class="modal-header">
                         <button class="close closeLogInModal">&times;</button>
                         <h4 class="text-center">Log In</h4>
@@ -309,7 +309,7 @@ defined('BASEPATH') OR exit('');
                                 </div>
                                 <div class="col-sm-4"></div>
                                 <div class="col-sm-2 pull-right">
-                                    <button id='loginModalSubmit' class="btn btn-primary">Log in</button>
+                                    <button id='loginModalSubmit' class="btn btn-success">Log in</button>
                                 </div>
                             </div>
                         </form>
